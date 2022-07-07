@@ -41,8 +41,6 @@ namespace PunchApi
         public PunchRecord SetPunch([FromBody] PunchInput Input)
         {
             PunchRecord PR = new PunchRecord();
-            //PR.ID = Input.ID;
-            //PR.QueryDate = Input.QueryDate;
             var str = HttpContext.Session.GetString(Input.ID + "_" + Input.QueryDate);
             if (str == null)
             {
