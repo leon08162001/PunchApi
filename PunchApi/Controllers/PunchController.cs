@@ -5,6 +5,7 @@ using System;
 
 namespace PunchApi
 {
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class PunchController : ControllerBase
